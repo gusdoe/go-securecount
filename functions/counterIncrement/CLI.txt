@@ -1,0 +1,25 @@
+
+
+
+https://www.youtube.com/watch?v=SmNLIY9j3Ls
+
+https://hub.docker.com/r/yunspace/serverless-golang/
+
+
+https://docs.aws.amazon.com/lambda/latest/dg/lambda-go-how-to-create-deployment-package.html
+https://serverless.com/blog/framework-example-golang-lambda-support/
+
+set GOOS=linux
+go build -o main main.go
+%USERPROFILE%\Go\bin\build-lambda-zip.exe -output main.zip main
+
+%GOPATH%\bin\build-lambda-zip.exe -output main.zip main
+
+
+$env:GOOS = "linux"
+go build -o main main.go
+~\Go\Bin\build-lambda-zip.exe -output main.zip main
+
+
+
+go.exe get -u github.com/aws/aws-lambda-go/cmd/build-lambda-zip
